@@ -14,3 +14,18 @@ copyDiscountCoupon.addEventListener('click', function(){
 
     }, 900);
  })
+ let itemList = [] ;
+ function AddItem(item,price){
+    itemList.push(item);
+    renderList() ;
+ }
+ 
+ function renderList(){
+    let output = document.getElementById('cart-item')
+    output.innerHTML= '' ;
+    itemList.forEach((item,index)  =>{
+output.innerHTML += ` <div>
+${index + 1} . <sapn> ${item}</sapn>
+</div>`
+    })
+ }
